@@ -1,0 +1,150 @@
+:root {
+    --primary: #33F9FF;
+    --black: #000000;
+    --white: #ffffff;
+    --btn_shadow: #39e5eb;
+    --border: rgba(255, 255, 68, 0.226);
+    --result: red;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 0px;
+}
+
+@media(max-width: 1024px) {
+    section {
+        display: block;
+        text-align: center;
+    }
+
+    .io-area {
+        margin-top: 40px;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+}
+
+/*clock area start*/
+#clock {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 2px var(--black) solid;
+}
+
+#clock span em {
+    font-size: 20px;
+    width: 40px;
+    position: absolute;
+    margin-top: 20px;
+    left: 50%;
+    margin-left: -20px;
+    text-align: center;
+    font-style: normal;
+}
+
+.center,
+.hour,
+.minute,
+.second {
+    position: absolute;
+    background: var(--black);
+    top: 50%;
+    left: 50%;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+
+.hour,
+.minute,
+.second {
+    border-radius: 70% 70% 0 0;
+    transform-origin: center bottom;
+}
+
+.hour {
+    width: 7px;
+    height: 77px;
+    margin-left: -1px;
+    margin-top: -75px;
+}
+
+.minute {
+    width: 5px;
+    height: 100px;
+    margin-top: -98px;
+    margin-left: 0px;
+}
+
+.second {
+    width: 3px;
+    height: 140px;
+    margin-left: 1px;
+    margin-top: -136px;
+}
+
+.hScale,
+.mScale {
+    position: absolute;
+    left: 50%;
+    background: var(--black);
+}
+
+.hScale {
+    width: 6px;
+    height: 18px;
+    margin-left: -3px;
+    transform-origin: center 175px;
+}
+
+.mScale {
+    width: 4px;
+    height: 10px;
+    margin-left: -2px;
+    transform-origin: center 175px;
+}
+/*clock area end*/
+
+/*input and output area start*/
+.io-area > p, .btn {
+    margin: 40px 0;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 20px var(--btn_shadow);
+}
+
+.result {
+    color: var(--result);
+}
+/*input and output area end*/
